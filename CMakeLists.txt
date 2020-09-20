@@ -1,8 +1,13 @@
 cmake_minimum_required(VERSION 3.18)
 project(visual-geometry VERSION 1.0.0 DESCRIPTION "Simple geometry visualization tool based on Qt")
 
+include_directories("src/include")
+
 add_library(visual-geometry SHARED
-    src/visual_geometry.cpp)
+    src/display.cpp
+    src/point.cpp
+    src/line.cpp
+    src/plot.cpp)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 target_link_libraries(visual-geometry Qt5::Widgets)
