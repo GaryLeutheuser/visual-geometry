@@ -1,4 +1,4 @@
 class VisualGeometry {
     public:
-        void HelloWorld(void);
+        void HelloWorld(int argc, char * argv[]);
 };

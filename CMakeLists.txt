@@ -4,6 +4,9 @@ project(visual-geometry VERSION 1.0.0 DESCRIPTION "Simple geometry visualization
 add_library(visual-geometry SHARED
     src/visual_geometry.cpp)
 
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+target_link_libraries(visual-geometry Qt5::Widgets)
+
 set_target_properties(visual-geometry PROPERTIES VERSION ${PROJECT_VERSION})
 set_target_properties(visual-geometry PROPERTIES PUBLIC_HEADER include/visual_geometry.h)
 target_include_directories(visual-geometry PRIVATE .)
