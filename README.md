@@ -32,3 +32,30 @@ target_link_libraries(example PUBLIC
 ```
 
 Ultimately, you just need to `#include <visual-geometry.h>` and link with `visual-geometry`.
+
+# Usage
+See below for a simple example program that draws a few elements.
+```
+#include <visual_geometry.h>
+
+#include <list>
+
+typedef visualgeometry::Point Point;
+typedef visualgeometry::Line Line;
+typedef visualgeometry::Display Display;
+
+int main() {
+    std::list<Point> points;
+    points.push_back(Point(15,20));
+    points.push_back(Point(77, 77));
+
+    std::list<Line> lines;
+    lines.push_back(Line(Point(120, 120), Point(150, 150)));
+    lines.push_back(Line(Point(150, 150), Point(97, 532)));
+
+    Display vg = Display(points, lines);
+    vg.DrawPlot();
+
+    return 0;
+}
+```
