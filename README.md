@@ -59,3 +59,6 @@ int main() {
     return 0;
 }
 ```
+
+Output:
+![Example application output](doc/images/example_output.png)
