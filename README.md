@@ -61,4 +61,5 @@ int main() {
 ```
 
 Output:
+
 ![Example application output](doc/images/example_output.png)
